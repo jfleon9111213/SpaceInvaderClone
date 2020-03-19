@@ -1,0 +1,82 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scripts/Score.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/EnemySpawnScript.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/EnemySpawnsManager.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/PlayerSpawnerScript.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/PlayerScene.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/EnemyScene.tscn" type="PackedScene" id=6]
+
+[sub_resource type="StreamTexture" id=1]
+flags = 4
+load_path = "res://.import/blackbackground.png-94d4033b28a3804d856c8290b67b0c63.stex"
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10.7742, 305.659 )
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 131, 37 )
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 509.054, 298.491 )
+scale = Vector2( 0.738662, 0.223378 )
+texture = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="Background"]
+rotating = true
+zoom = Vector2( 20, 20 )
+
+[node name="VerticalBounds" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VerticalBounds"]
+position = Vector2( 1034.28, 301.274 )
+shape = SubResource( 2 )
+
+[node name="VerticalBounds2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VerticalBounds2"]
+position = Vector2( -12.98, 301.363 )
+shape = SubResource( 2 )
+
+[node name="hud" type="CanvasLayer" parent="."]
+
+[node name="ScoreLabel" type="Label" parent="hud"]
+margin_left = 138.0
+margin_top = 39.0
+margin_right = 230.0
+margin_bottom = 81.0
+text = "Score:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="Label" parent="hud"]
+margin_left = 182.0
+margin_top = 40.05
+margin_right = 274.0
+margin_bottom = 82.05
+text = "0
+"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EnemySpawns" type="YSort" parent="."]
+position = Vector2( -125.475, -26.9489 )
+script = ExtResource( 3 )
+
+[node name="Spawn" type="YSort" parent="EnemySpawns"]
+position = Vector2( 527.918, 284.645 )
+script = ExtResource( 2 )
+EnemyScene = ExtResource( 6 )
+
+[node name="Spawn2" type="YSort" parent="EnemySpawns"]
+position = Vector2( 678.93, 282.19 )
+script = ExtResource( 2 )
+EnemyScene = ExtResource( 6 )
+
+[node name="PlayerSpawner" type="Node2D" parent="."]
+position = Vector2( 311.846, 554.938 )
+script = ExtResource( 4 )
+PlayerScene = ExtResource( 5 )

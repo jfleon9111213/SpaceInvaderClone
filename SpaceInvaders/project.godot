@@ -16,12 +16,12 @@ _global_script_class_icons={
 [application]
 
 config/name="SpaceInvaders"
-run/main_scene="res://SpaceBattle2D.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://Scenes/StartMenu.tscn"
+config/icon="res://Sprites/icon.png"
 
 [autoload]
 
-GlobalVariables="*res://GlobalVariables.gd"
+GlobalVariables="*res://Scripts/GlobalVariables.gd"
 
 [input]
 

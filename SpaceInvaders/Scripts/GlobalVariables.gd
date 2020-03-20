@@ -9,6 +9,9 @@ var canFire = true
 var score = 0
 var playerScore = 0
 var enemiesKilled = 0
+var lives = 2
+var playerLives = 2
+var playerDead = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -19,6 +22,9 @@ func startGame():
 	score = 0
 	playerScore = 0
 	enemiesKilled = 0
+	lives = 2
+	playerLives = 2
+	playerDead = false
 
 func newTimer(time, called_from_node, add_as_child_of, callback):
 	

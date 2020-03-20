@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scripts/Score.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/EnemySpawnScript.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Scripts/PlayerSpawnerScript.gd" type="Script" id=4]
 [ext_resource path="res://Scenes/PlayerScene.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/EnemyScene.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scripts/LivesScript.gd" type="Script" id=7]
 
 [sub_resource type="StreamTexture" id=1]
 flags = 4
@@ -62,6 +63,27 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="LivesLabel" type="Label" parent="hud"]
+margin_left = 1077.35
+margin_top = 33.3
+margin_right = 1169.35
+margin_bottom = 75.3
+text = "Lives:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lives" type="Label" parent="hud"]
+margin_left = 1118.88
+margin_top = 32.905
+margin_right = 1210.88
+margin_bottom = 74.905
+text = "2"
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="EnemySpawns" type="YSort" parent="."]
 position = Vector2( -125.475, -26.9489 )
 script = ExtResource( 3 )
@@ -80,3 +102,5 @@ EnemyScene = ExtResource( 6 )
 position = Vector2( 311.846, 554.938 )
 script = ExtResource( 4 )
 PlayerScene = ExtResource( 5 )
+[connection signal="you_died" from="PlayerSpawner" to="EnemySpawns/Spawn" method="_on_PlayerSpawner_you_died"]
+[connection signal="you_died" from="PlayerSpawner" to="EnemySpawns/Spawn2" method="_on_PlayerSpawner_you_died"]

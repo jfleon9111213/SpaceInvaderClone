@@ -3,7 +3,7 @@ export(PackedScene) var EnemyMissileScene
 
 var velocity = Vector2()
 var shootTimer
-
+var interval = 5.0
 var missile
 
 # Declare member variables here. Examples:
@@ -13,7 +13,7 @@ var missile
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	shootTimer = GlobalVariables.newTimer(5.0, self, self, "shootTimerStopped")
+	shootTimer = GlobalVariables.newTimer(interval, self, self, "shootTimerStopped")
 	shootTimer.start()
 
 
@@ -34,7 +34,11 @@ func shootTimerStopped():
 	missile.global_position.x = self.global_position.x - 9
 	missile.global_position.y = self.global_position.y + 9
 	
-	missile.add_to_group("enemymissiles")
+	#self.global_position.x -= 5
+	
+	missile.add_to_group("missiles")
 	
 	get_tree().get_root().add_child(missile)
+	#interval /= 1.05
+	shootTimer.set_wait_time(interval)
 	shootTimer.start()

@@ -16,7 +16,6 @@ func _physics_process(delta):
 
 
 func _on_screen_exited():
-	GlobalVariables.canFire = true
 	self.queue_free()
 
 

@@ -18,8 +18,16 @@ func _ready():
 	get_tree().get_root().add_child(enemy)
 
 
+func clearEnemies():
+	for i in get_tree().get_root().get_children():
+		if(i.is_in_group("enemies") or i.is_in_group("missiles")):
+			i.queue_free()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_PlayerSpawner_you_died():
+	clearEnemies() # Replace with function body.

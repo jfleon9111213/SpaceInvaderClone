@@ -57,4 +57,5 @@ func fireMissile():
 
 func missileHitPlayer():
 	self.queue_free()
+	GlobalVariables.playerDead = true
 	return true

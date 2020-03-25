@@ -1,4 +1,4 @@
-extends Button
+extends StaticBody2D
 
 
 # Declare member variables here. Examples:
@@ -15,7 +15,5 @@ func _ready():
 #func _process(delta):
 #	pass
 
-
-func _on_Button_pressed():
-	GlobalVariables.cloneChosen = true
-	get_tree().change_scene("res://Scenes/SpaceBattle2D.tscn")
+func missileHit():
+	self.queue_free()

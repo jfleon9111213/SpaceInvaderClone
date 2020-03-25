@@ -21,9 +21,6 @@ var moveDown
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if(not GlobalVariables.cloneChosen):
-		shootChanceMin = 25
-		interval = 3.5
 	left = 0
 	right = 0
 	moveLeft = true
@@ -33,10 +30,10 @@ func _ready():
 	shootTimer.start()
 
 
-#func _physics_process(delta):
+func _physics_process(delta):
 
 	# warning-ignore:return_value_discarded
-	#move_and_collide(velocity * delta)
+	move_and_collide(velocity * delta)
 	
 func missileHit():
 	GlobalVariables.score += 10	

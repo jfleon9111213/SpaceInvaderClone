@@ -1,6 +1,6 @@
 extends Area2D
 
-export(int) var Speed = 2
+export(int) var Speed = 4
 
 var angle
 
@@ -25,6 +25,7 @@ func _on_screen_exited():
 
 
 func _on_Bullet_body_entered(body):
-	body.missileHit()
 	self.queue_free()
+	if(body.is_in_group("barriers") or body.is_in_group("enemies")):
+		body.missileHit()
 	GlobalVariables.canFire = true

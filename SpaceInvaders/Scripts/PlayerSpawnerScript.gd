@@ -21,7 +21,7 @@ func spawnPlayer():
 	player.position.x = self.position.x
 	player.position.y = self.position.y
 
-	#player.add_to_group("player")
+	player.add_to_group("players")
 	get_tree().get_root().add_child(player)
 
 

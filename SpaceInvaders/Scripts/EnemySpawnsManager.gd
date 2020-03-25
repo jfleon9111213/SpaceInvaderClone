@@ -15,7 +15,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if(GlobalVariables.enemiesKilled == 2):
+	if(GlobalVariables.enemiesKilled == 48):
 		GlobalVariables.enemiesKilled = 0
 		respawnTimer.start()
 

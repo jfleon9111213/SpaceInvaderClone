@@ -12,6 +12,7 @@ var enemiesKilled = 0
 var lives = 2
 var playerLives = 2
 var playerDead = false
+var cloneChosen = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

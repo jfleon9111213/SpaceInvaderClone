@@ -1,7 +1,7 @@
 extends KinematicBody2D
 export(PackedScene) var MissileScene
 
-var speed = 150
+var speed = 300
 var velocity = Vector2()
 
 var missile
@@ -14,10 +14,10 @@ func get_input():
 	if Input.is_action_pressed('ui_left'):
 		velocity.x -= 1
 		
-#	if Input.is_action_pressed('ui_down'):
-#		velocity.y += 1
-#	if Input.is_action_pressed('ui_up'):
-#		velocity.y -= 1
+	if Input.is_action_pressed('ui_down'):
+		velocity.y += 1
+	if Input.is_action_pressed('ui_up'):
+		velocity.y -= 1
 
 	velocity = velocity.normalized() * speed
 	

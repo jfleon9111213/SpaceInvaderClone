@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Scripts/PlayButton.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/ReturnMenuScript.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/GameOverButton.gd" type="Script" id=2]
 
 [sub_resource type="StreamTexture" id=1]
 flags = 4
@@ -26,12 +27,25 @@ __meta__ = {
 
 [node name="Button" type="Button" parent="CanvasLayer/Control"]
 margin_left = 362.412
-margin_top = 264.641
+margin_top = 186.641
 margin_right = 662.412
-margin_bottom = 365.641
+margin_bottom = 287.641
 theme = SubResource( 2 )
 custom_colors/font_color = Color( 0.184314, 0.85098, 0.145098, 1 )
 text = "Play Again"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="CanvasLayer/Control"]
+margin_left = 362.412
+margin_top = 393.641
+margin_right = 662.412
+margin_bottom = 494.641
+theme = SubResource( 2 )
+custom_colors/font_color = Color( 0.184314, 0.85098, 0.145098, 1 )
+text = "Back to Main Menu"
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -49,3 +63,4 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="pressed" from="CanvasLayer/Control/Button" to="CanvasLayer/Control/Button" method="_on_Button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Button2" to="CanvasLayer/Control/Button2" method="_on_Button_pressed"]

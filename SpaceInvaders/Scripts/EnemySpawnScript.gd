@@ -14,8 +14,8 @@ func _ready():
 	enemy.position.x = self.position.x
 	enemy.position.y = self.position.y
 
-	enemy.add_to_group("enemies")
 	get_tree().get_root().add_child(enemy)
+	enemy.add_to_group("enemies")
 
 
 func clearEnemies():

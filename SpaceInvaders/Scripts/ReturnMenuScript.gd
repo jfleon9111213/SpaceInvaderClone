@@ -17,5 +17,4 @@ func _ready():
 
 
 func _on_Button_pressed():
-	GlobalVariables.cloneChosen = true
-	get_tree().change_scene("res://Scenes/SpaceBattle2D.tscn")
+	get_tree().change_scene("res://Scenes/StartMenu.tscn")

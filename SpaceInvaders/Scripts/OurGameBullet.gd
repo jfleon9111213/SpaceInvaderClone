@@ -1,6 +1,6 @@
 extends Area2D
 
-export(int) var Speed = 3
+export(int) var Speed = 8
 
 var angle
 
@@ -12,19 +12,20 @@ func _ready():
 
 
 func _physics_process(delta):
-	position.y += Speed
+	position.y -= Speed
 
 
 func _on_screen_exited():
+	GlobalVariables.canFire = true
 	self.queue_free()
 
 
 #func _on_Bullet_area_entered(area):
-#	pass
-#	#area.missileHit()
+#	area.missileHit()
+
 
 func _on_Bullet_body_entered(body):
 	self.queue_free()
-	var f = body.get_groups()
-	if(body.is_in_group("players") or body.is_in_group("barriers")):
+	if(body.is_in_group("barriers") or body.is_in_group("enemies")):
 		body.missileHit()
+	GlobalVariables.canFire = true

@@ -1,15 +1,15 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/enemybullet.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/pixil-frame-0.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/pixil-enemmissile.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 1.50904, 2.58607 )
+extents = Vector2( 2.24444, 5.15041 )
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Bullet" type="Area2D" parent="."]
-position = Vector2( 21.3911, -1.27926 )
+position = Vector2( -4.18578, -3.60443 )
 input_pickable = false
 gravity_vec = Vector2( 0, 0 )
 gravity = 0.0
@@ -18,16 +18,16 @@ angular_damp = 0.0
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="Bullet"]
-position = Vector2( 14.5381, 12.1457 )
-scale = Vector2( 1.29444, 1.24291 )
+position = Vector2( 15.3287, 12.9363 )
+scale = Vector2( 1.31025, 1.25872 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bullet"]
-position = Vector2( 14.0296, 40.0572 )
+position = Vector2( 6.72192, 8.95206 )
 shape = SubResource( 1 )
 
 [node name="notifier" type="VisibilityNotifier2D" parent="Bullet"]
-position = Vector2( 14.1361, 40.1085 )
-scale = Vector2( 0.130637, 0.22057 )
+position = Vector2( 6.91147, 9.30012 )
+scale = Vector2( 0.188767, 0.513599 )
 [connection signal="area_entered" from="Bullet" to="Bullet" method="_on_Bullet_area_entered"]
 [connection signal="body_entered" from="Bullet" to="Bullet" method="_on_Bullet_body_entered"]

@@ -3,11 +3,11 @@
 [ext_resource path="res://Scripts/EnemyScript.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/EnemyMissileScene.tscn" type="PackedScene" id=2]
 
-[sub_resource type="StreamTexture" id=6]
+[sub_resource type="StreamTexture" id=1]
 flags = 4
 load_path = "res://.import/enemy1.PNG-6eadce50f3a7aceb806709d89a94fe78.stex"
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 18.3867, 14.2441 )
 
 [node name="Node2D" type="Node2D"]
@@ -23,8 +23,8 @@ EnemyMissileScene = ExtResource( 2 )
 [node name="Sprite" type="Sprite" parent="Enemy"]
 position = Vector2( 23.4486, 22.6984 )
 scale = Vector2( 0.640675, 0.788651 )
-texture = SubResource( 6 )
+texture = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
 position = Vector2( 24.0566, 23.7414 )
-shape = SubResource( 7 )
+shape = SubResource( 2 )

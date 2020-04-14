@@ -47,7 +47,7 @@ func fireMissile():
 	
 	missile = MissileScene.instance()
 	
-	missile.position.x = self.position.x + 245
+	missile.position.x = self.position.x + 235
 	missile.position.y = self.position.y + 560
 	
 	missile.add_to_group("missiles")
@@ -58,3 +58,9 @@ func missileHit():
 	self.queue_free()
 	GlobalVariables.playerDead = true
 	return true
+
+
+func _on_Area2D_body_entered(body):
+	if(body.is_in_group("enemies")):
+		self.missileHit()
+		body.missileHit()

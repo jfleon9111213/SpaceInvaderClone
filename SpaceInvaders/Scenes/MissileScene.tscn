@@ -3,7 +3,7 @@
 [ext_resource path="res://Scripts/bullet.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/pixil-frame-0.png" type="Texture" id=2]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1.11382, 2.02379 )
 
 [node name="Node2D" type="Node2D"]
@@ -23,7 +23,7 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bullet"]
 visible = false
 position = Vector2( -0.52701, 22.3913 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="notifier" type="VisibilityNotifier2D" parent="Bullet"]
 visible = false

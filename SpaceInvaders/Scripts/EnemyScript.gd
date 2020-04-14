@@ -5,7 +5,8 @@ var velocity = Vector2()
 var shootTimer
 var shootChanceMin = 5
 var shootChanceMax = 100
-var interval = 5.0
+var interval = 3.5
+var minInterval = 0.2
 var missile
 var randomTimer
 var chance
@@ -23,7 +24,7 @@ var moveDown
 func _ready():
 	if(not GlobalVariables.cloneChosen):
 		shootChanceMin = 25
-		interval = 3.5
+		interval = 1.5
 	left = 0
 	right = 0
 	moveLeft = true
@@ -54,8 +55,8 @@ func shootTimerStopped():
 	if(chance > shootChanceMax - shootChanceMin):
 		missile = EnemyMissileScene.instance()
 	
-		missile.global_position.x = self.global_position.x - 9
-		missile.global_position.y = self.global_position.y + 9
+		missile.position.x = self.global_position.x + 19
+		missile.position.y = self.global_position.y + 39
 	
 		missile.add_to_group("missiles")
 	
@@ -80,7 +81,9 @@ func shootTimerStopped():
 				self.global_position.y += 15
 				moveDown += 1
 		
-	shootChanceMin += 2
-	interval /= 1.03
+	if(shootChanceMin < 85):
+		shootChanceMin += 2
+	if(interval < minInterval):
+		interval /= 1.01
 	shootTimer.set_wait_time(interval)
 	shootTimer.start()

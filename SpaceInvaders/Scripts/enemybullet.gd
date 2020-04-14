@@ -25,6 +25,5 @@ func _on_screen_exited():
 
 func _on_Bullet_body_entered(body):
 	self.queue_free()
-	var f = body.get_groups()
 	if(body.is_in_group("players") or body.is_in_group("barriers")):
 		body.missileHit()

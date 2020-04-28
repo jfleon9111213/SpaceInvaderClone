@@ -8,31 +8,28 @@
 [ext_resource path="res://Scenes/EnemyScene.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scripts/LivesScript.gd" type="Script" id=7]
 [ext_resource path="res://Scripts/BarrierScript.gd" type="Script" id=8]
-
-[sub_resource type="StreamTexture" id=1]
-flags = 4
-load_path = "res://.import/blackbackground.png-94d4033b28a3804d856c8290b67b0c63.stex"
+[ext_resource path="res://Sprites/blackbackground.png" type="Texture" id=9]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 10.7742, 305.659 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 577.498, 17.6783 )
 
-[sub_resource type="StreamTexture" id=3]
+[sub_resource type="StreamTexture" id=4]
 flags = 4
 load_path = "res://.import/barrier1.png-b95d5b6f7443c351148e9077db7a748a.stex"
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 5.4318, 5.28648 )
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( 131, 37 )
 
 [node name="Background" type="Sprite" parent="."]
-position = Vector2( 509.054, 297.774 )
+position = Vector2( 509.054, 296.482 )
 scale = Vector2( 0.738662, 0.223378 )
-texture = SubResource( 1 )
+texture = ExtResource( 9 )
 
 [node name="Camera2D" type="Camera2D" parent="Background"]
 rotating = true
@@ -49,14 +46,14 @@ position = Vector2( 75, 73 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HorizontalBounds3"]
 position = Vector2( 414.949, 541.542 )
-shape = SubResource( 5 )
+shape = SubResource( 3 )
 
 [node name="HorizontalBounds4" type="StaticBody2D" parent="."]
 position = Vector2( 75, -555 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HorizontalBounds4"]
 position = Vector2( 414.949, 541.542 )
-shape = SubResource( 5 )
+shape = SubResource( 3 )
 
 [node name="VerticalBounds2" type="StaticBody2D" parent="."]
 
@@ -370,11 +367,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block1"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block1"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block2" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -385,11 +382,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block2"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block2"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block4" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -400,11 +397,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block4"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block4"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block3" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -415,11 +412,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block3"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block3"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block8" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -430,11 +427,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block8"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block8"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block7" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -445,11 +442,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block7"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block7"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block6" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -460,11 +457,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block6"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block6"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block5" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -475,11 +472,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block5"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block5"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block16" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -490,11 +487,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block16"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block16"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block15" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -505,11 +502,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block15"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block15"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block14" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -520,11 +517,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block14"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block14"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block13" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -535,11 +532,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block13"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block13"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block12" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -550,11 +547,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block12"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block12"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block11" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -565,11 +562,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block11"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block11"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block10" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -580,11 +577,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block10"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block10"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block9" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -595,11 +592,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block9"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block9"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block32" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -610,11 +607,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block32"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block32"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block31" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -625,11 +622,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block31"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block31"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block30" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -640,11 +637,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block30"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block30"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block29" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -655,11 +652,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block29"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block29"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block28" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -670,11 +667,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block28"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block28"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block27" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -685,11 +682,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block27"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block27"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block26" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -700,11 +697,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block26"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block26"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block25" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -715,11 +712,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block25"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block25"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block24" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -730,11 +727,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block24"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block24"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block23" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -745,11 +742,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block23"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block23"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block22" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -760,11 +757,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block22"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block22"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block21" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -775,11 +772,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block21"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block21"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block20" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -790,11 +787,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block20"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block20"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block19" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -805,11 +802,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block19"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block19"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block18" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -820,11 +817,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block18"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block18"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block17" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -835,11 +832,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block17"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block17"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block48" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -850,11 +847,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block48"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block48"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block47" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -865,11 +862,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block47"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block47"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block46" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -880,11 +877,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block46"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block46"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block45" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -895,11 +892,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block45"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block45"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block44" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -910,11 +907,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block44"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block44"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block43" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -925,11 +922,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block43"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block43"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block42" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -940,11 +937,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block42"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block42"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block41" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -955,11 +952,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block41"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block41"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block40" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -970,11 +967,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block40"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block40"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block39" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -985,11 +982,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block39"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block39"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block38" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -1000,11 +997,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block38"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block38"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block37" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -1015,11 +1012,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block37"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block37"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block36" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -1030,11 +1027,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block36"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block36"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block35" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -1045,11 +1042,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block35"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block35"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block34" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -1060,11 +1057,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block34"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block34"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block33" type="StaticBody2D" parent="Barrier1" groups=[
 "barriers",
@@ -1075,11 +1072,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier1/Block33"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1/Block33"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Barrier2" type="YSort" parent="."]
 position = Vector2( 280, -49 )
@@ -1093,11 +1090,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block1"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block1"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block2" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1108,11 +1105,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block2"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block2"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block4" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1123,11 +1120,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block4"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block4"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block3" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1138,11 +1135,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block3"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block3"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block8" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1153,11 +1150,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block8"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block8"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block7" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1168,11 +1165,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block7"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block7"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block6" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1183,11 +1180,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block6"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block6"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block5" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1198,11 +1195,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block5"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block5"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block16" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1213,11 +1210,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block16"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block16"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block15" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1228,11 +1225,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block15"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block15"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block14" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1243,11 +1240,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block14"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block14"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block13" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1258,11 +1255,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block13"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block13"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block12" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1273,11 +1270,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block12"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block12"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block11" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1288,11 +1285,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block11"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block11"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block10" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1303,11 +1300,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block10"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block10"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block9" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1318,11 +1315,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block9"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block9"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block32" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1333,11 +1330,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block32"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block32"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block31" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1348,11 +1345,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block31"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block31"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block30" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1363,11 +1360,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block30"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block30"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block29" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1378,11 +1375,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block29"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block29"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block28" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1393,11 +1390,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block28"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block28"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block27" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1408,11 +1405,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block27"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block27"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block26" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1423,11 +1420,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block26"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block26"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block25" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1438,11 +1435,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block25"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block25"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block24" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1453,11 +1450,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block24"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block24"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block23" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1468,11 +1465,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block23"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block23"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block22" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1483,11 +1480,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block22"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block22"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block21" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1498,11 +1495,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block21"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block21"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block20" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1513,11 +1510,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block20"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block20"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block19" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1528,11 +1525,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block19"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block19"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block18" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1543,11 +1540,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block18"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block18"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block17" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1558,11 +1555,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block17"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block17"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block48" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1573,11 +1570,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block48"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block48"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block47" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1588,11 +1585,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block47"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block47"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block46" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1603,11 +1600,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block46"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block46"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block45" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1618,11 +1615,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block45"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block45"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block44" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1633,11 +1630,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block44"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block44"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block43" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1648,11 +1645,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block43"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block43"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block42" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1663,11 +1660,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block42"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block42"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block41" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1678,11 +1675,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block41"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block41"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block40" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1693,11 +1690,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block40"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block40"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block39" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1708,11 +1705,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block39"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block39"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block38" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1723,11 +1720,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block38"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block38"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block37" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1738,11 +1735,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block37"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block37"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block36" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1753,11 +1750,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block36"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block36"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block35" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1768,11 +1765,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block35"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block35"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block34" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1783,11 +1780,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block34"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block34"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block33" type="StaticBody2D" parent="Barrier2" groups=[
 "barriers",
@@ -1798,11 +1795,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier2/Block33"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2/Block33"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Barrier4" type="YSort" parent="."]
 position = Vector2( 545, -49 )
@@ -1816,11 +1813,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block1"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block1"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block2" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -1831,11 +1828,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block2"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block2"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block4" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -1846,11 +1843,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block4"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block4"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block3" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -1861,11 +1858,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block3"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block3"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block8" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -1876,11 +1873,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block8"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block8"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block7" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -1891,11 +1888,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block7"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block7"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block6" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -1906,11 +1903,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block6"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block6"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block5" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -1921,11 +1918,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block5"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block5"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block16" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -1936,11 +1933,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block16"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block16"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block15" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -1951,11 +1948,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block15"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block15"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block14" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -1966,11 +1963,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block14"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block14"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block13" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -1981,11 +1978,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block13"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block13"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block12" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -1996,11 +1993,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block12"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block12"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block11" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -2011,11 +2008,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block11"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block11"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block10" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -2026,11 +2023,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block10"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block10"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block9" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -2041,11 +2038,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block9"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block9"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block32" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -2056,11 +2053,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block32"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block32"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block31" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -2071,11 +2068,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block31"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block31"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block30" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -2086,11 +2083,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block30"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block30"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block29" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -2101,11 +2098,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block29"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block29"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block28" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -2116,11 +2113,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block28"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block28"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block27" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -2131,11 +2128,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block27"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block27"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block26" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -2146,11 +2143,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block26"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block26"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block25" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -2161,11 +2158,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block25"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block25"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block24" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -2176,11 +2173,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block24"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block24"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block23" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -2191,11 +2188,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block23"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block23"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block22" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -2206,11 +2203,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block22"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block22"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block21" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -2221,11 +2218,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block21"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block21"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block20" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -2236,11 +2233,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block20"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block20"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block19" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -2251,11 +2248,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block19"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block19"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block18" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -2266,11 +2263,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block18"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block18"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block17" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -2281,11 +2278,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block17"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block17"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block48" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -2296,11 +2293,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block48"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block48"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block47" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -2311,11 +2308,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block47"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block47"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block46" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -2326,11 +2323,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block46"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block46"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block45" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -2341,11 +2338,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block45"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block45"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block44" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -2356,11 +2353,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block44"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block44"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block43" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -2371,11 +2368,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block43"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block43"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block42" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -2386,11 +2383,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block42"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block42"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block41" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -2401,11 +2398,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block41"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block41"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block40" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -2416,11 +2413,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block40"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block40"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block39" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -2431,11 +2428,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block39"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block39"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block38" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -2446,11 +2443,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block38"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block38"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block37" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -2461,11 +2458,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block37"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block37"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block36" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -2476,11 +2473,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block36"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block36"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block35" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -2491,11 +2488,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block35"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block35"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block34" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -2506,11 +2503,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block34"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block34"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block33" type="StaticBody2D" parent="Barrier4" groups=[
 "barriers",
@@ -2521,11 +2518,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier4/Block33"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4/Block33"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Barrier3" type="YSort" parent="."]
 position = Vector2( 817, -49 )
@@ -2539,11 +2536,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block1"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block1"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block2" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -2554,11 +2551,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block2"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block2"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block4" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -2569,11 +2566,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block4"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block4"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block3" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -2584,11 +2581,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block3"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block3"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block8" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -2599,11 +2596,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block8"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block8"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block7" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -2614,11 +2611,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block7"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block7"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block6" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -2629,11 +2626,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block6"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block6"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block5" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -2644,11 +2641,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block5"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block5"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block16" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -2659,11 +2656,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block16"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block16"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block15" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -2674,11 +2671,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block15"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block15"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block14" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -2689,11 +2686,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block14"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block14"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block13" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -2704,11 +2701,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block13"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block13"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block12" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -2719,11 +2716,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block12"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block12"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block11" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -2734,11 +2731,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block11"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block11"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block10" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -2749,11 +2746,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block10"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block10"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block9" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -2764,11 +2761,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block9"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block9"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block32" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -2779,11 +2776,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block32"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block32"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block31" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -2794,11 +2791,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block31"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block31"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block30" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -2809,11 +2806,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block30"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block30"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block29" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -2824,11 +2821,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block29"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block29"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block28" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -2839,11 +2836,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block28"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block28"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block27" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -2854,11 +2851,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block27"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block27"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block26" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -2869,11 +2866,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block26"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block26"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block25" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -2884,11 +2881,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block25"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block25"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block24" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -2899,11 +2896,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block24"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block24"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block23" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -2914,11 +2911,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block23"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block23"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block22" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -2929,11 +2926,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block22"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block22"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block21" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -2944,11 +2941,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block21"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block21"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block20" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -2959,11 +2956,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block20"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block20"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block19" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -2974,11 +2971,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block19"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block19"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block18" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -2989,11 +2986,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block18"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block18"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block17" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -3004,11 +3001,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block17"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block17"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block48" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -3019,11 +3016,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block48"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block48"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block47" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -3034,11 +3031,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block47"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block47"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block46" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -3049,11 +3046,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block46"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block46"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block45" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -3064,11 +3061,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block45"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block45"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block44" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -3079,11 +3076,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block44"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block44"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block43" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -3094,11 +3091,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block43"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block43"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block42" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -3109,11 +3106,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block42"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block42"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block41" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -3124,11 +3121,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block41"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block41"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block40" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -3139,11 +3136,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block40"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block40"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block39" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -3154,11 +3151,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block39"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block39"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block38" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -3169,11 +3166,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block38"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block38"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block37" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -3184,11 +3181,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block37"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block37"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block36" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -3199,11 +3196,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block36"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block36"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block35" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -3214,11 +3211,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block35"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block35"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block34" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -3229,11 +3226,11 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block34"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block34"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Block33" type="StaticBody2D" parent="Barrier3" groups=[
 "barriers",
@@ -3244,10 +3241,10 @@ script = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Barrier3/Block33"]
 position = Vector2( 39.5631, 35.9144 )
 scale = Vector2( 2.5083, 2.28271 )
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3/Block33"]
 position = Vector2( 29.6001, 29.0138 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 [connection signal="you_died" from="PlayerSpawner" to="EnemySpawns/Spawn" method="_on_PlayerSpawner_you_died"]
 [connection signal="you_died" from="PlayerSpawner" to="EnemySpawns/Spawn2" method="_on_PlayerSpawner_you_died"]

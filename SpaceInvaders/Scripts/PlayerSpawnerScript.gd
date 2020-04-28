@@ -5,9 +5,9 @@ export(PackedScene) var PlayerScene
 var player
 var respawnTimer
 signal you_died
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var invincibleTimer
+var playerCollision
+var playerSprite
 
 
 # Called when the node enters the scene tree for the first time.
@@ -20,6 +20,16 @@ func spawnPlayer():
 
 	player.position.x = self.position.x
 	player.position.y = self.position.y
+	
+	invincibleTimer = GlobalVariables.newTimer(1.0, self, self, "onInvincibleTimerStopped")
+		
+	playerCollision = player.get_node("Player").get_node("PlayerCollision")
+	playerCollision.disabled = true
+		
+	playerSprite = player.get_node("Player").get_node("PlayerSprite")
+	playerSprite.set_modulate(Color(1, 1, 1, 0.25))
+		
+	invincibleTimer.start()
 
 	player.add_to_group("players")
 	get_tree().get_root().add_child(player)
@@ -40,3 +50,7 @@ func _process(delta):
 
 func spawnTimerStopped():
 	spawnPlayer()
+	
+func onInvincibleTimerStopped():
+	playerCollision.disabled = false
+	playerSprite.set_modulate(Color(1, 1, 1, 1))

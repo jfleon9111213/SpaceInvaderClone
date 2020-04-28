@@ -13,6 +13,7 @@ var lives = 2
 var playerLives = 2
 var playerDead = false
 var cloneChosen = false
+var barrierArray = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -37,6 +38,10 @@ func newTimer(time, called_from_node, add_as_child_of, callback):
 	add_as_child_of.add_child(timer)
 	
 	return timer
+	
+func barrierRestore():
+	for barrier in barrierArray:
+		barrier.respawnBarrier()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

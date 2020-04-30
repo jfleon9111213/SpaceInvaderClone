@@ -12,8 +12,8 @@ load_path = "res://.import/blackbackground.png-94d4033b28a3804d856c8290b67b0c63.
 [node name="Node2D" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 507.658, 304.061 )
-scale = Vector2( 0.73037, 0.221095 )
+position = Vector2( 502.382, 304.061 )
+scale = Vector2( 0.77882, 0.221095 )
 texture = SubResource( 1 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -62,5 +62,9 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 502.482, 305.99 )
+current = true
 [connection signal="pressed" from="CanvasLayer/Control/Button" to="CanvasLayer/Control/Button" method="_on_Button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/Button2" to="CanvasLayer/Control/Button2" method="_on_Button_pressed"]

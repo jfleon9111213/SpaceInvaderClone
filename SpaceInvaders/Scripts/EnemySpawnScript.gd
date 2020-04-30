@@ -11,8 +11,8 @@ var list
 func _ready():
 	enemy = EnemyScene.instance()
 
-	enemy.position.x = self.position.x
-	enemy.position.y = self.position.y
+	enemy.position.x = self.global_position.x
+	enemy.position.y = self.global_position.y
 
 	get_tree().get_root().add_child(enemy)
 	enemy.add_to_group("enemies")

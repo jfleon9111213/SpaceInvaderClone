@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/PlayButton.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/PlayButtonOurGame.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/InstructionsButton.gd" type="Script" id=3]
 
 [sub_resource type="StreamTexture" id=1]
 flags = 4
@@ -12,8 +13,8 @@ load_path = "res://.import/blackbackground.png-94d4033b28a3804d856c8290b67b0c63.
 [node name="Node2D" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 507.658, 304.061 )
-scale = Vector2( 0.73037, 0.221095 )
+position = Vector2( 519.794, 307.677 )
+scale = Vector2( 0.784632, 0.244759 )
 texture = SubResource( 1 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -38,6 +39,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Button3" type="Button" parent="CanvasLayer/Control"]
+margin_left = 355.84
+margin_top = 356.985
+margin_right = 655.84
+margin_bottom = 457.985
+theme = SubResource( 2 )
+custom_colors/font_color = Color( 0.184314, 0.85098, 0.145098, 1 )
+text = "Instructions"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Button2" type="Button" parent="CanvasLayer/Control"]
 margin_left = 355.948
 margin_top = 28.6493
@@ -50,5 +64,10 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 511.604, 293.601 )
+current = true
 [connection signal="pressed" from="CanvasLayer/Control/Button" to="CanvasLayer/Control/Button" method="_on_Button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Button3" to="CanvasLayer/Control/Button3" method="_on_Button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/Button2" to="CanvasLayer/Control/Button2" method="_on_Button_pressed"]

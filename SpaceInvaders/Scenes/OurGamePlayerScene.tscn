@@ -2,16 +2,13 @@
 
 [ext_resource path="res://Scripts/OurGamePlayer.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/OurGameMissileScene.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sprites/playerShip.png" type="Texture" id=3]
 
-[sub_resource type="StreamTexture" id=1]
-flags = 4
-load_path = "res://.import/playerSprite.png-8f5e0a97d80a09618562c7fe14db09da.stex"
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 44.3342, 33.39 )
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 21.1555, 34.2104 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 52.0449, 40.3634 )
+extents = Vector2( 25.2711, 35.3184 )
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( 0.418121, 2.09061 )
@@ -24,18 +21,19 @@ scale = Vector2( 0.316648, 0.418841 )
 script = ExtResource( 1 )
 MissileScene = ExtResource( 2 )
 
-[node name="PlayerSprite" type="Sprite" parent="Player"]
-position = Vector2( -107.153, 95.6746 )
-scale = Vector2( 0.467628, 0.505574 )
-texture = SubResource( 1 )
-
 [node name="PlayerCollision" type="CollisionShape2D" parent="Player"]
+visible = false
 position = Vector2( -145.459, 129.48 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="Area2D" type="Area2D" parent="Player"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Area2D"]
-position = Vector2( -147.131, 129.631 )
+position = Vector2( -143.973, 129.631 )
 shape = SubResource( 3 )
+
+[node name="PlayerSprite" type="Sprite" parent="Player"]
+position = Vector2( -98.754, 110.269 )
+scale = Vector2( 3.10512, 2.29144 )
+texture = ExtResource( 3 )
 [connection signal="body_entered" from="Player/Area2D" to="Player" method="_on_Area2D_body_entered"]

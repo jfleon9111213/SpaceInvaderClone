@@ -2,13 +2,10 @@
 
 [ext_resource path="res://Scripts/EnemyScript.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/EnemyMissileScene.tscn" type="PackedScene" id=2]
-
-[sub_resource type="StreamTexture" id=1]
-flags = 4
-load_path = "res://.import/enemy1.PNG-6eadce50f3a7aceb806709d89a94fe78.stex"
+[ext_resource path="res://Sprites/enemyDemonHead.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 18.3867, 14.2441 )
+extents = Vector2( 16.2477, 19.1289 )
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( 143.197, 224.594 )
@@ -20,11 +17,10 @@ position = Vector2( 0.950012, 0 )
 script = ExtResource( 1 )
 EnemyMissileScene = ExtResource( 2 )
 
-[node name="Sprite" type="Sprite" parent="Enemy"]
-position = Vector2( 23.4486, 22.6984 )
-scale = Vector2( 0.640675, 0.788651 )
-texture = SubResource( 1 )
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
-position = Vector2( 24.0566, 23.7414 )
+position = Vector2( 24.0566, 19.7414 )
 shape = SubResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="Enemy"]
+position = Vector2( 29.7544, 35.1317 )
+texture = ExtResource( 3 )

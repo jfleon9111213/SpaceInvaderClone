@@ -18,11 +18,6 @@ func _physics_process(delta):
 func _on_screen_exited():
 	self.queue_free()
 
-
-#func _on_Bullet_area_entered(area):
-#	pass
-#	#area.missileHit()
-
 func _on_Bullet_body_entered(body):
 	self.queue_free()
 	if(body.is_in_group("players") or body.is_in_group("barriers")):

@@ -9,10 +9,6 @@ func _ready():
 	GlobalVariables.barrierArray.push_front(self)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
 func missileHit():
 	collision.set_deferred("disabled", true)
 	sprite.set_modulate(Color(0, 0, 0, 0))

@@ -1,9 +1,5 @@
 extends YSort
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 var list
 var respawnTimer
 
@@ -20,5 +16,7 @@ func _process(delta):
 		respawnTimer.start()
 
 func spawnTimerStopped():
+	GlobalVariables.shootChanceMin += 5
+	GlobalVariables.interval /= 1.5
 	for spawner in list:
 		spawner._ready()

@@ -14,6 +14,11 @@ var playerLives = 2
 var playerDead = false
 var cloneChosen = false
 var barrierArray = []
+var player = null
+var missileLifeTime = 3.0
+var shootChanceMin = 20
+var missileChanceMin = 10
+var interval = 1.25
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -27,9 +32,13 @@ func startGame():
 	lives = 2
 	playerLives = 2
 	playerDead = false
+	barrierArray = []
+	shootChanceMin = 20
+	missileChanceMin = 10
+	interval = 1.26
+	
 
 func newTimer(time, called_from_node, add_as_child_of, callback):
-	
 	var timer = Timer.new()
 	timer.set_one_shot(true)
 	timer.connect("timeout", called_from_node, callback)
@@ -40,6 +49,7 @@ func newTimer(time, called_from_node, add_as_child_of, callback):
 	return timer
 	
 func barrierRestore():
+	print(barrierArray.size())
 	for barrier in barrierArray:
 		barrier.respawnBarrier()
 

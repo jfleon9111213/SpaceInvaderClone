@@ -3,9 +3,9 @@ export(PackedScene) var EnemyMissileScene
 
 var velocity = Vector2()
 var shootTimer
-var shootChanceMin = 5
+var shootChanceMin
 var shootChanceMax = 100
-var interval = 3.5
+var interval
 var minInterval = 0.2
 var missile
 var randomTimer
@@ -18,6 +18,8 @@ var moveDown
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	interval = GlobalVariables.interval
+	shootChanceMin = GlobalVariables.shootChanceMin
 	left = 0
 	right = 0
 	moveLeft = true
@@ -81,10 +83,5 @@ func shootTimerStopped():
 			if(moveDown < 11):
 				self.global_position.y += 15
 				moveDown += 1
-		
-	if(shootChanceMin < 85):
-		shootChanceMin += 2
-	if(interval < minInterval):
-		interval /= 1.01
 	shootTimer.set_wait_time(interval)
 	shootTimer.start()

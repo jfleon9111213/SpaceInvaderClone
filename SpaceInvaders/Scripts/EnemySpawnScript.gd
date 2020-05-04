@@ -1,9 +1,6 @@
 extends YSort
 export(PackedScene) var EnemyScene
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 var enemy
 var list
 
@@ -24,10 +21,5 @@ func clearEnemies():
 			i.queue_free()
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-
 func _on_PlayerSpawner_you_died():
-	clearEnemies() # Replace with function body.
+	clearEnemies()

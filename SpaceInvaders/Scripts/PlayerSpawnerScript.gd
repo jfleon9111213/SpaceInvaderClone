@@ -46,6 +46,7 @@ func _process(delta):
 			GlobalVariables.lives -= 1	
 			GlobalVariables.playerLives.set_text(str(GlobalVariables.lives))
 			GlobalVariables.playerDead = false
+			GlobalVariables.canFire = true
 			respawnTimer.start()
 
 func spawnTimerStopped():

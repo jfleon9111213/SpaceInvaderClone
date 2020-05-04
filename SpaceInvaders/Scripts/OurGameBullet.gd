@@ -19,13 +19,15 @@ func _physics_process(delta):
 
 
 func _on_screen_exited():
-	GlobalVariables.canFire = true
+	self.queue_free()
+	
+func missileHit():
 	self.queue_free()
 	
 
 func _on_Bullet_body_entered(body):
 	self.queue_free()
-	if(body.is_in_group("barriers") or body.is_in_group("enemies")):
+	if(body.is_in_group("barriers") or body.is_in_group("enemies") or body.is_in_group("homingMissiles")):
 		body.missileHit()
 		randomGenerator.randomize()
 		chance = randomGenerator.randf_range(0, 100)
@@ -35,4 +37,3 @@ func _on_Bullet_body_entered(body):
 			powerUp.position.y = self.global_position.y
 			powerUp.add_to_group("powerUps")
 			get_tree().get_root().add_child(powerUp)
-	GlobalVariables.canFire = true

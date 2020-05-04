@@ -13,11 +13,6 @@ func get_input():
 		velocity.x += 1
 	if Input.is_action_pressed('ui_left'):
 		velocity.x -= 1
-		
-#	if Input.is_action_pressed('ui_down'):
-#		velocity.y += 1
-#	if Input.is_action_pressed('ui_up'):
-#		velocity.y -= 1
 
 	velocity = velocity.normalized() * speed
 	
@@ -35,12 +30,6 @@ func firePressed():
 	if GlobalVariables.canFire:
 		GlobalVariables.canFire = false
 		fireMissile()
-		
-		# Start the firing timer
-		#firingTimer.start()
-	
-		# Turn off the ability to fire until the firing interval time runs out
-		#canFire = false
 
 
 func fireMissile():
@@ -55,6 +44,17 @@ func fireMissile():
 	get_tree().get_root().add_child(missile)
 
 func missileHit():
+	var randomVolume = rand_range(-2, 0)
+	$deathSound.set_volume_db(randomVolume)
+	$deathSound.play()
+	var t = Timer.new()
+	t.set_wait_time(0.1)
+	t.set_one_shot(true)
+	self.add_child(t)
+	t.start()
+	yield(t, "timeout")
+	
+	GlobalVariables.player = null
 	self.queue_free()
 	GlobalVariables.playerDead = true
 	return true

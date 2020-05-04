@@ -9,7 +9,9 @@ extents = Vector2( 2.9325, 7.04121 )
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Bullet" type="Area2D" parent="."]
+[node name="Bullet" type="Area2D" parent="." groups=[
+"playerBullets",
+]]
 position = Vector2( 21.3911, -1.27926 )
 input_pickable = false
 gravity_vec = Vector2( 0, 0 )
@@ -20,7 +22,6 @@ script = ExtResource( 1 )
 BarrierPowerUpScene = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bullet"]
-visible = false
 position = Vector2( 9.18821, 28.5878 )
 shape = SubResource( 1 )
 
@@ -32,5 +33,4 @@ scale = Vector2( 0.288792, 0.638551 )
 position = Vector2( 19.2165, 31.4465 )
 scale = Vector2( 1.59647, 1.29824 )
 texture = ExtResource( 2 )
-[connection signal="area_entered" from="Bullet" to="Bullet" method="_on_Bullet_area_entered"]
 [connection signal="body_entered" from="Bullet" to="Bullet" method="_on_Bullet_body_entered"]

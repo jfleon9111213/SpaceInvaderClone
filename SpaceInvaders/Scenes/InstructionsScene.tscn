@@ -23,10 +23,10 @@ __meta__ = {
 }
 
 [node name="Button" type="Button" parent="CanvasLayer/Control"]
-margin_left = 448.959
-margin_top = 507.346
-margin_right = 591.959
-margin_bottom = 558.346
+margin_left = 831.348
+margin_top = 515.279
+margin_right = 974.348
+margin_bottom = 566.279
 text = "Go Back"
 script = ExtResource( 2 )
 __meta__ = {

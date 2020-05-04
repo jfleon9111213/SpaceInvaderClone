@@ -1,14 +1,12 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/MissileScene.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sprites/playerShip.png" type="Texture" id=3]
+[ext_resource path="res://SoundEffects/PlayerExplosion.ogg" type="AudioStream" id=4]
 
-[sub_resource type="StreamTexture" id=1]
-flags = 4
-load_path = "res://.import/playerSprite.png-8f5e0a97d80a09618562c7fe14db09da.stex"
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 44.3342, 33.39 )
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 21.1555, 34.2104 )
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( 0.418121, 2.09061 )
@@ -21,11 +19,14 @@ scale = Vector2( 0.316648, 0.418841 )
 script = ExtResource( 1 )
 MissileScene = ExtResource( 2 )
 
-[node name="PlayerSprite" type="Sprite" parent="Player"]
-position = Vector2( -107.153, 95.6746 )
-scale = Vector2( 0.467628, 0.505574 )
-texture = SubResource( 1 )
-
 [node name="PlayerCollision" type="CollisionShape2D" parent="Player"]
 position = Vector2( -145.459, 129.48 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
+
+[node name="PlayerSprite" type="Sprite" parent="Player"]
+position = Vector2( -98.754, 110.269 )
+scale = Vector2( 3.10512, 2.29144 )
+texture = ExtResource( 3 )
+
+[node name="deathSound" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource( 4 )

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scripts/Score.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/EnemySpawnScript.gd" type="Script" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Scenes/EnemyScene.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scripts/LivesScript.gd" type="Script" id=7]
 [ext_resource path="res://Scripts/BarrierScript.gd" type="Script" id=8]
+[ext_resource path="res://Music/Destroyer (Haunting-MediumPaced).wav" type="AudioStream" id=9]
 
 [sub_resource type="StreamTexture" id=1]
 flags = 4
@@ -3265,5 +3266,9 @@ shape = SubResource( 5 )
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 509.4, 294.552 )
 current = true
-[connection signal="you_died" from="PlayerSpawner" to="EnemySpawns/Spawn2" method="_on_PlayerSpawner_you_died"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 9 )
+autoplay = true
 [connection signal="you_died" from="PlayerSpawner" to="EnemySpawns/Spawn" method="_on_PlayerSpawner_you_died"]
+[connection signal="you_died" from="PlayerSpawner" to="EnemySpawns/Spawn2" method="_on_PlayerSpawner_you_died"]

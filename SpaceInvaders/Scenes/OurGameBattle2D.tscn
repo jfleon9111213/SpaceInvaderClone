@@ -1,14 +1,16 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scripts/Score.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/EnemySpawnScript.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/EnemySpawnsManager.gd" type="Script" id=3]
 [ext_resource path="res://Scripts/PlayerSpawnerScript.gd" type="Script" id=4]
 [ext_resource path="res://Scenes/OurGamePlayerScene.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/EnemyScene.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/OurGameEnemyScene.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scripts/LivesScript.gd" type="Script" id=7]
 [ext_resource path="res://Scripts/BarrierScript.gd" type="Script" id=8]
 [ext_resource path="res://Sprites/blackbackground.png" type="Texture" id=9]
+[ext_resource path="res://Scenes/DemonEyeTurretScene.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Music/Destroyer (Haunting-MediumPaced).wav" type="AudioStream" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10.7742, 305.659 )
@@ -313,11 +315,6 @@ position = Vector2( 381.062, 193.296 )
 script = ExtResource( 2 )
 EnemyScene = ExtResource( 6 )
 
-[node name="Spawn34" type="YSort" parent="EnemySpawns"]
-position = Vector2( 260.314, 193.639 )
-script = ExtResource( 2 )
-EnemyScene = ExtResource( 6 )
-
 [node name="Spawn33" type="YSort" parent="EnemySpawns"]
 position = Vector2( 504.798, 193.31 )
 script = ExtResource( 2 )
@@ -353,15 +350,20 @@ position = Vector2( 878.798, 193.31 )
 script = ExtResource( 2 )
 EnemyScene = ExtResource( 6 )
 
-[node name="Spawn26" type="YSort" parent="EnemySpawns"]
-position = Vector2( 940.062, 193.296 )
-script = ExtResource( 2 )
-EnemyScene = ExtResource( 6 )
-
 [node name="Spawn25" type="YSort" parent="EnemySpawns"]
 position = Vector2( 819.314, 193.639 )
 script = ExtResource( 2 )
 EnemyScene = ExtResource( 6 )
+
+[node name="SpawnTurret" type="YSort" parent="EnemySpawns"]
+position = Vector2( 328.842, 8.5789 )
+script = ExtResource( 2 )
+EnemyScene = ExtResource( 10 )
+
+[node name="SpawnTurret2" type="YSort" parent="EnemySpawns"]
+position = Vector2( 860.842, 8.5789 )
+script = ExtResource( 2 )
+EnemyScene = ExtResource( 10 )
 
 [node name="PlayerSpawner" type="Node2D" parent="."]
 position = Vector2( 311.846, 554.938 )
@@ -3263,5 +3265,9 @@ shape = SubResource( 4 )
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 510.38, 295.098 )
 current = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 11 )
+autoplay = true
 [connection signal="you_died" from="PlayerSpawner" to="EnemySpawns/Spawn" method="_on_PlayerSpawner_you_died"]
 [connection signal="you_died" from="PlayerSpawner" to="EnemySpawns/Spawn2" method="_on_PlayerSpawner_you_died"]
